@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<!--Inline expression statement -->
+@*<p>Today Date and Time is: @DateTime.Now</p>
+    <p>This Year is @DateTime.Now.Year</p>*@
+
+<!--Declaring Variables-->
+@*@{
+        string name = "Demo";
+        var TodaysTime = DateTime.Now.ToLongTimeString();
+    }
+    <h2>Your Name is @name</h2>
+    <h2>Todays Time is @TodaysTime</h2>*@
+
+<!--Conditional Statement -->
+@*@{
+        int marks = 80;
+        if(marks >= 80)
+        {
+            <h2>Your Grade is A</h2>
+        }
+        else
+        {
+            <h2>Your Grade is B</h2>
+        }
+    }*@
+
+@*@{
+    string fruit = "apple";
+    switch (fruit)
+    {
+        case "banana":
+            <h2>You Have Selected Banana</h2>
+            break;
+
+        case "Mango":
+            <h2>Your Have Selected Mango</h2>
+            break;
+
+        case "apple":
+            <h2>Your Have Selected Apple</h2>
+            break;
+
+        default:
+            <h2>Invalid Fruit</h2>
+            break;
+    }
+}*@
+
+@*@{ 
+    for (int i = 1; i < 10; i++)
+    {
+        <h2>@i</h2>
+    }
+}*@
+
+@{ 
+    string[] sports = {"cricket", "footboll", "hockey"};
+
+    foreach (string i in sports)
+    {
+        <h2>@i</h2>
+    }
+
+}
