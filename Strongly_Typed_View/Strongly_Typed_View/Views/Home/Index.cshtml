@@ -1,0 +1,42 @@
+﻿@model List<Strongly_Typed_View.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    var a = (Strongly_Typed_View.Models.Employee)ViewData["var1"];
+    var b = ViewBag.var2;
+
+}
+
+<h2>ViewData Data :</h2>
+<h2>@a.ID</h2>
+<h2>@a.Name</h2>
+<h2>@a.Age</h2>
+
+<h2>ViewBag Data :</h2>
+<h2>@b.ID</h2>
+<h2>@b.Name</h2>
+<h2>@b.Age</h2>
+
+@*<h2>Strongly Typed View Data</h2>
+<h3>@Model.ID</h3>
+<h3>@Model.Name</h3>
+<h3>@Model.Age</h3>*@
+
+@*<h3>@Model.Designation</h3> //compile time error due to Strongly Typed View*@
+
+
+<ul>
+    @{
+        foreach (var i in Model)
+        {
+            <li>@i.ID</li>
+            <li>@i.Name</li>
+            <li>@i.Age</li>
+        }
+    }
+</ul>
