@@ -8,22 +8,49 @@
 
 @using (Html.BeginForm())
 {
-    <p>@Html.LabelFor(model => model.EmployeeId)&nbsp; @Html.TextBoxFor(model => model.EmployeeId,"",new {@class = "form-control" })
-    @Html.ValidationMessageFor(model => model.EmployeeId, "", new { @class = "text-danger"})</p>
+    <p>
+        @Html.LabelFor(model => model.EmployeeId)&nbsp; @Html.TextBoxFor(model => model.EmployeeId, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmployeeId, "", new { @class = "text-danger" })
+    </p>
 
-    <p>@Html.LabelFor(model => model.EmployeeAge)&nbsp; @Html.TextBoxFor(model => model.EmployeeAge, "", new { @class = "form-control" })
-     @Html.ValidationMessageFor(model => model.EmployeeAge, "", new { @class = "text-danger" })</p>
+    <p>
+        @Html.LabelFor(model => model.EmployeeAge)&nbsp; @Html.TextBoxFor(model => model.EmployeeAge, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmployeeAge, "", new { @class = "text-danger" })
+    </p>
 
-    <p>@Html.LabelFor(model => model.EmployeeName)&nbsp; @Html.TextBoxFor(model => model.EmployeeName, "", new { @class = "form-control" })
-     @Html.ValidationMessageFor(model => model.EmployeeName, "", new { @class = "text-danger" })</p>
+    <p>
+        @Html.LabelFor(model => model.EmployeeName)&nbsp; @Html.TextBoxFor(model => model.EmployeeName, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmployeeName, "", new { @class = "text-danger" })
+    </p>
 
-    <p>@Html.LabelFor(model => model.EmployeeGender)&nbsp; @Html.TextBoxFor(model => model.EmployeeGender, "", new { @class = "form-control" })
-     @Html.ValidationMessageFor(model => model.EmployeeGender, "", new { @class = "text-danger" })</p>
+    <p>
+        @Html.LabelFor(model => model.EmployeeGender)&nbsp; @Html.TextBoxFor(model => model.EmployeeGender, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmployeeGender, "", new { @class = "text-danger" })
+    </p>
 
-    <p>@Html.LabelFor(model => model.EmplpyeeEmail)&nbsp; @Html.TextBoxFor(model => model.EmplpyeeEmail, "", new { @class = "form-control" })
-     @Html.ValidationMessageFor(model => model.EmplpyeeEmail, "", new { @class = "text-danger" })</p>
+    <p>
+        @Html.LabelFor(model => model.EmplpyeeEmail)&nbsp; @Html.TextBoxFor(model => model.EmplpyeeEmail, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmplpyeeEmail, "", new { @class = "text-danger" })
+    </p>
 
-    <input type="submit"  value="submit" class="btn btn-info"/>
+
+    <p>
+        @Html.LabelFor(model => model.EmpPassword)&nbsp; @Html.TextBoxFor(model => model.EmpPassword, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmpPassword, "", new { @class = "text-danger" })
+    </p>
+
+
+    <p>
+        @Html.LabelFor(model => model.EmpConfirmPassword)&nbsp; @Html.TextBoxFor(model => model.EmpConfirmPassword, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.EmpConfirmPassword, "", new { @class = "text-danger" })
+    </p>
+
+
+    <p>
+        @Html.LabelFor(model => model.EmpOrganizationName)&nbsp; @Html.TextBoxFor(model => model.EmpOrganizationName, "", new { @class = "form-control", @Value="ABC ORGANIZATION" })
+    </p>
+
+    <input type="submit" value="submit" class="btn btn-info" />
 
     @Html.Raw(ViewData["SuccessMessage"])
 
